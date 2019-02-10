@@ -44,7 +44,7 @@ def login():
     if request.method == 'POST':
         # if request.form['username'] != 'admin' or request.form['password'] != 'admin':
         if authenticate(request.form['username'], request.form['password']):
-            return redirect(url_for('swipe'))
+            return redirect(url_for('swiper'))
         else:
             error = 'Invalid Credentials. Please try again.'
 
@@ -57,8 +57,8 @@ def login():
 @app.route('/sponsor_registration', methods=['GET', 'POST'])
 def sponsor_registration():
         if request.method == 'POST':
-            if request.form['reg'] == "Confirm":
-                return redirect(url_for('login'))
+            return redirect(url_for('login'))
+            
         return render_template('create.html')
 
 '''
@@ -75,7 +75,7 @@ def entrepreneur_login():
     return render_template('create.html')
 
 @app.route('/swiper', methods=['GET', 'POST'])
-def swipe():
+def swiper():
     return render_template('swiper.html')
 
 
