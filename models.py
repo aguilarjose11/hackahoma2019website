@@ -19,7 +19,7 @@ def get_posts():
 def authenticate(user, psw):
         con = sql.connect(path.join(ROOT, 'database.db'))
         cur = con.cursor()
-        result = cur.execute('select * from keychain where username=? and password=?;', (user, psw)).parseall()
+        result = cur.execute('select * from keychain where username=? and password=?;', (user, psw)).fetchall()
         con.close()
         if result:
             return True

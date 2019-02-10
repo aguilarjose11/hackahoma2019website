@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel= "stylesheet" type="text/css" href="{{url_for('static', filename='css/create.css')}}"/>
+<script type="text/javascript" src="{{url_for('static', filename='js/create.js')}}"></script>
 <html>
 <header>
 
 </header>
 <body>
-  <form action="./create.html">
+  <form action="./create.html" style='padding-top: 15%;'>
+    <center>
       <h3>
         First Name
       </h3>
@@ -25,13 +30,16 @@
       <h3>
         Password
       </h3>
-      <input type="text" name="pname"><br>
+      <input type="submit" name="pname" ><br>
       <h3>
         Confirm Password
       </h3>
       <input type="text" name="cpname"><br>
-      <input type="submit" value="Confirm">
+      <input class="btn btn-warning" type="submit" value="Confirm" style="margin-top: 30px;" name='reg'>
+    </center>
  </form>
 </body>
 
 </html>
+
+<!-- Hello! -->

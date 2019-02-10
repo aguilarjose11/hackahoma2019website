@@ -9,6 +9,8 @@ create table keychain (
 create table entrepreuners (
   id integer primary key autoincrement,
   projectname text not null,
-  projectdesc text not null,
+  projectdesc text not null
 
-)
+);
+
+insert into keychain (username, password) values ('admin','admin');
