@@ -32,3 +32,10 @@ def databasesize():
     cur = con.cursor()
     total = cur.execute('select max(ID) from posts ').fetchall()
     return total
+
+def signup(user, psw, first, last, email, phone):
+    con = sql.connect(path.join(ROOT, 'database.db'))
+    cur = con.cursor()
+    cur.execute('insert into keychain (username, password, first, last, email, phone) values (?, ?, ?, ?, ?, ?)',(user, psw, first, last, email, phone))
+    con.commit()
+    con.close()

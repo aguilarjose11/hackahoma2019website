@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, session, abort
 from flask_cors import CORS
-from models import get_posts, create_post, authenticate
+from models import get_posts, create_post, authenticate, signup
 
 app = Flask(__name__)
 '''
@@ -57,8 +57,14 @@ def login():
 @app.route('/sponsor_registration', methods=['GET', 'POST'])
 def sponsor_registration():
         if request.method == 'POST':
-            return redirect(url_for('login'))
-            
+            signup(request.form['usname'],
+                    request.form['pname'],
+                    request.form['fname'],
+                    request.form['lname'],
+                    request.form['ename'],
+                    request.form['phnum'])
+            return redirect(url_for('swiper'))
+
         return render_template('create.html')
 
 '''
