@@ -1,0 +1,15 @@
+.button_menu{
+  position: relative;
+  width: 75%;
+  margin-left: 12%;
+  margin-top: 100px;
+  height: 25%;
+}
+
+.home_buttons{
+  margin-top: 50px;
+  background-color: #a8d3ff;
+}
+html{
+  background-color: #a8d3ff;
+}
